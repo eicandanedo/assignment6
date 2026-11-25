@@ -1,0 +1,31 @@
+{
+  "version": "0",
+  "id": "c4c1c1c9-6542-e61b-6ef0-8c4d36933a92",
+  "detail-type": "CloudWatch Alarm State Change",
+  "source": "aws.cloudwatch",
+  "account": "123456789012",
+  "time": "2026-11-20T18:44:31Z",
+  "region": "us-east-1",
+  "resources": ["arn:aws:cloudwatch:us-east-1:123456789012:alarm:prod-claims-worker-heartbeat"],
+  "detail": {
+    "alarmName": "prod-claims-worker-heartbeat",
+    "state": {
+      "value": "ALARM",
+      "reason": "Threshold Crossed: 3 out of the last 3 datapoints were less than the threshold (1.0).",
+      "timestamp": "2026-11-20T18:44:31.000+0000"
+    },
+    "previousState": {"value": "OK"},
+    "configuration": {
+      "description": "worker process hung, no heartbeat from host",
+      "metrics": [{
+        "id": "m1",
+        "metricStat": {
+          "metric": {"namespace": "Custom/Workers", "name": "WorkerHeartbeat", "dimensions": {"Service": "claims"}},
+          "period": 60,
+          "stat": "Sum"
+        },
+        "returnData": true
+      }]
+    }
+  }
+}

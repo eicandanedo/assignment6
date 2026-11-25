@@ -1,0 +1,27 @@
+{
+  "version": "0",
+  "id": "7f3e2a10-1b2c-4d5e-8f90-123456abcdef",
+  "detail-type": "CloudWatch Alarm State Change",
+  "source": "aws.cloudwatch",
+  "account": "123456789012",
+  "time": "2026-11-20T19:02:10Z",
+  "region": "us-east-1",
+  "resources": ["arn:aws:cloudwatch:us-east-1:123456789012:alarm:prod-orders-db-connections"],
+  "detail": {
+    "alarmName": "prod-orders-db-connections",
+    "state": {"value": "ALARM", "reason": "Threshold Crossed", "timestamp": "2026-11-20T19:02:10.000+0000"},
+    "previousState": {"value": "OK"},
+    "configuration": {
+      "description": "",
+      "metrics": [{
+        "id": "m1",
+        "metricStat": {
+          "metric": {"namespace": "AWS/RDS", "name": "DatabaseConnections", "dimensions": {"DBInstanceIdentifier": "orders-prod"}},
+          "period": 60,
+          "stat": "Maximum"
+        },
+        "returnData": true
+      }]
+    }
+  }
+}

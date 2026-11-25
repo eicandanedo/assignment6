@@ -1,0 +1,8 @@
+{
+  "compute":     {"team": "platform-ops", "runbooks": ["Ops-RestartService", "Ops-ReplaceInstance", "Ops-ScaleOutService"]},
+  "database":    {"team": "database",     "runbooks": ["Ops-CollectDatabaseDiagnostics", "Ops-ExpandDatabaseStorage", "Ops-RaiseDynamoDBCapacity"]},
+  "network":     {"team": "network",      "runbooks": ["Ops-CheckVpnTunnel", "Ops-RunReachabilityAnalysis", "Ops-CheckDnsResolution"]},
+  "storage":     {"team": "platform-ops", "runbooks": ["Ops-CleanDiskSpace", "Ops-ExpandEbsVolume", "Ops-RerunBackupJob"]},
+  "security":    {"team": "security-ops", "runbooks": ["Ops-IsolateInstance", "Ops-DisableAccessKey", "Ops-RevertPublicAccess"]},
+  "application": {"team": "app-oncall",   "runbooks": ["Ops-RollbackDeployment", "Ops-RedriveDeadLetterQueue", "Ops-RaiseLambdaConcurrency"]}
+}

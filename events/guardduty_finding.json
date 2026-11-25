@@ -1,0 +1,15 @@
+{
+  "version": "0",
+  "id": "0b9a1e44-2f1d-4a7e-9a55-6e2b3c4d5e6f",
+  "detail-type": "GuardDuty Finding",
+  "source": "aws.guardduty",
+  "account": "123456789012",
+  "time": "2026-11-21T03:15:00Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+    "type": "UnauthorizedAccess:EC2/SSHBruteForce",
+    "title": "SSH brute force attacks against i-0abc123def4567890",
+    "severity": 5
+  }
+}
